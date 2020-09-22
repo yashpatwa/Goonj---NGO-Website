@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="526px" viewBox="0 0 320 526" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="-3" width="320" height="529"></rect>
+    </defs>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-320px-4cols-16px-gitter-16px-offset-Copy">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#010E26" fill-rule="nonzero" opacity="0.8" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

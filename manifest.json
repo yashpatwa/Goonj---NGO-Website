@@ -1,0 +1,53 @@
+{
+  "name": "GOONJ",
+  "short_name": "goonj",
+  "theme_color": "#2196f3",
+  "background_color": "#0b0b0b",
+  "display": "browser",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "images/hom.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/g2.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/g11.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "images/g26.jpg",
+      "sizes": "144x144",
+      "type": "image/jpg"
+    },
+    {
+      "src": "images/g11.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "images/g28.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "images/g27.jpg",
+      "sizes": "384x384",
+      "type": "image/jpg"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}

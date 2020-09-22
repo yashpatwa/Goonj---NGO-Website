@@ -1,0 +1,1222 @@
+<head>
+    <meta charset="utf-8">
+    <title>About Us</title>
+    <link rel="stylesheet"
+      type="text/css"
+      href="nav.css"
+    />
+    <link rel="icon" href="images/logot.png" type="image/png">
+  </head>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 180%;
+  color: #666;
+  text-align: center;
+}
+nav{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 60px;
+  box-sizing: border-box;
+  transition: .5s;
+  z-index: 5;
+  opacity: 1;
+  box-shadow: 0 10px 10px -2px rgba(0,0,0,.2);
+  
+}
+nav.black{
+  background: rgba(0,0,0,.8);
+  height: 80px;
+  padding: 10px 50px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover{
+  color:white;
+}
+nav .logo{
+  float: left;
+}
+nav .logo img{
+  height: 80px;
+  transition: .5s;
+}
+nav.black .logo img{
+  height: 60px;
+}
+nav ul{
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li{
+  list-style: none;
+  margin-top: 25px;
+  line-height: none;
+  font-size: 18px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 1s;
+  text-shadow: 0 0 10px #000;
+}
+nav ul li a {
+  position: relative;
+}
+nav ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #fff;
+  height: 1px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+nav ul li a {
+  transition: all 2s;
+}
+
+nav ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #ff3300;
+  }
+}
+.parallax1 {
+  background: url("images/g11.png");
+  
+  min-height: 90%;
+}
+.parallax2 {
+  background: url("images/g28.jpg");
+  
+  min-height: 50%;
+}
+.parallax6 {
+  background: url("images/g27.jpg");
+  
+  min-height: 50%;
+}
+.parallax1, .parallax2, .parallax3, .parallax4, .parallax5, .parallax6 {
+  position: relative;
+  opacity: .75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* nav ul li a{
+  line-height: none;
+  font-size: 18px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 1s;
+  text-shadow: 0 0 10px #000;
+} */
+
+/* nav.black ul li a{
+  color: #fff;
+  line-height: 20px;
+} */
+nav.black ul li{
+  color: #fff;
+  line-height: 20px;
+}
+/* nav ul li a.active,
+nav ul li a:hover{
+  color: orange;
+} */
+nav ul li.active,
+nav ul li:hover{
+  color: orange;
+}
+.heading {
+  position: absolute;
+  color: #fff;
+  font-size: 550%;
+  top: 38%;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #000;
+  margin-bottom: 10px;
+  animation: text 3s 1;
+}
+.heading2 {
+  position: absolute;
+  color: #fff;
+  font-size: 150%;
+  top: 50%;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #000;
+}
+@keyframes text{
+  0%{
+    color: none;
+    margin-bottom: -40px;
+  }
+
+  30%{
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+
+  85%{
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+}
+.heading-sm {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-size: 250%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #000;
+}
+.two-col{
+  float: left;
+  width: 42%;
+  padding: 0 4%;
+  text-align: center;
+}
+section {
+  overflow: auto;
+  padding: 50px 80px;
+}
+.dark{
+  overflow: auto;
+  padding: 50px 80px;
+  background-color: #323232;
+  color: #f2f2f2;
+}
+@media (max-width: 900px){
+  nav ul li{
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .heading{
+    font-size: 250%;
+  }
+}
+@media (max-width: 600px){
+  .heading{
+    font-size: 250%;
+  }
+  .heading-sm{
+    font-size: 180%
+  }
+  .two-col {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  nav ul li{
+    font-size: 8px;
+    text-decoration: none;
+  }
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color:white;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.logo:hover{
+  -webkit-animation: rotation 2s infinite linear;
+}
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+:root {
+        --main-about-card-size: 250px;
+    }
+
+    .about .column {
+        width: var(--main-about-card-size);
+        padding: 10px auto;
+        height: calc(var(--main-about-card-size) + 10px);
+
+    }
+
+    .about {
+        /*padding-bottom: var(--main-card-size);*/
+    }
+
+    .about .row {
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50%;
+        /*padding: 50px;*/
+    }
+
+    .about .card {
+        position: absolute;
+        border-radius: 50%;
+        /*margin-top: 125px;*/
+        margin: 125px;
+
+        transform: translate(-50%, -50%);
+        width: var(--main-about-card-size);
+        height: var(--main-about-card-size);
+        transform-style: preserve-3d;
+        perspective: 600px;
+        transition: 0.5s;
+
+    }
+
+    .about .card .front img {
+        border-radius: 50%;
+    }
+
+    .about .card .front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        backface-visibility: hidden;
+        transform: rotateX(0deg);
+        transition: 0.5s;
+        border-radius: 50%;
+    }
+
+    .about .card:hover .front {
+        transform: rotateX(-180deg);
+    }
+
+    .about .card .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        backface-visibility: hidden;
+        transform: rotateX(180deg);
+        transition: 0.5s;
+        border-radius: 50%;
+    }
+
+    .about .card .back:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: calc((var(--main-about-card-size)/2) * 2);
+        width: calc(var(--main-about-card-size)/2);
+        background: rgba(255, 255, 255, .1);
+
+        border-bottom-left-radius: calc((var(--main-about-card-size)/2) * 2);
+        border-top-left-radius: calc((var(--main-about-card-size)/2) * 2);
+    }
+
+    .about .card:hover .back {
+        transform: rotateX(0deg);
+    }
+
+    .about .card .back .details {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+
+    }
+
+    .about .card .back .details h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .about .card .back .details h2 span {
+        color: #a7a7a7;
+        font-size: 16px;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      vertical-align: middle;
+      border: 0;
+  }
+
+  .profile-card{
+    width: 300px;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    position: absolute;
+    
+    background: rgba(255,255,255,1);
+    top: 50%;
+    
+  }
+
+  .profile-card header{
+    display: block;
+    position: relative;
+    background: rgba(255,255,255,1);
+    text-align: center;
+    padding: 30px 0 20px;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .profile-card header:before{
+    content: "";
+    position: absolute;
+    background: url('http://ali.shahab.pk/blur.php?img=http://ali.shahab.pk/ali-shahab.jpg&x=60') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    
+  }
+
+  .profile-card header:after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .profile-card header img{
+    border-radius: 100%;
+    overflow: hidden;
+    width: 150px;
+    /*border: 1px solid rgba(255,255,255,.5);*/
+    box-shadow: 0 1px 0 rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.1);
+  }
+
+  .profile-card header h1{
+    font-weight: 200;
+    font-size: 42px;
+    color: #444;
+    letter-spacing: -3px;
+    margin: 0;
+    padding-top:10px;
+  }
+
+  .profile-card header h2{
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: .5px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-card .profile-bio{
+    padding: 0 30px;
+    text-align: center;
+    color: #888;
+  }
+
+  .profile-card .profile-social-links{
+    display: table;
+    width: 70%;
+    margin: 20px auto;
+  }
+
+  .profile-card .profile-social-links li{
+    display: table-cell;
+    width: 33.3333333333333333%
+  }
+
+  .profile-card .profile-social-links li a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 100%;
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+  }
+  .profile-card .profile-social-links li a:hover{
+    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+  }
+
+  .profile-card .profile-social-links li a:active{
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+  }
+
+  .profile-card .profile-social-links li a img{
+    width: 100%;
+    display: block;
+  }
+
+  .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: grey;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+table,th,td {
+  border : 1px solid white;
+  border-collapse: collapse;
+  color: orange;
+}
+th,td {
+  padding: 5px;
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: white;
+  background-color: #383838;
+  animation: gradientBG 1s ease infinite;
+  border-top: 1px solid #e5e5e5;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: white;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: #686868;
+  border-radius: 100px;
+  color: white;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+</style>
+<script>
+  $(window).on('scroll',function(){
+        if($(window).scrollTop()){
+          $('nav').addClass('black');
+        }else {
+          $('nav').removeClass('black');
+        }
+      })
+</script>
+
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The social media icon bar -->
+<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+    <nav>
+      <div class="logo">
+        <a href="index.php">
+        <img src="images/logot.png" alt="logo">
+        </a>
+      </div>
+   <!--   <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>-->
+      <ul>
+        <li><a href="aboutuss.html">About Us</a></li>
+        <li><a href="workk.html">Projects</a></li>
+        <li><a href="galleryy.html">Gallery</a></li>
+        <li><a href="contactt.html">Contact Us</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="register.php">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="parallax1">
+      <div class="heading">About Us</div>
+    </div>
+
+    <section>
+    	<h1>Our Founders</h1>
+    	<div class="main body-top">
+        <div style="text-align: center;color: white;">
+            <!-- <h1 style="color: white;font-size: 35px">ABOUT US</h1> -->
+            <div class="about">
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <div class="front"><img width="100%" height="100%" src="images/tul.jpg"></div>
+                            <div class="back">
+                                <div class="details">
+                                    <h2>Tulika Kotian<br><span>Founder</span></h2>
+                                    
+                                    <div class="view">
+                                        <a href="#popup1">More Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card">
+                            <div class="front"><img width="100%" height="100%" src="images/yash.jpg"></div>
+                            <div class="back">
+                                <div class="details">
+                                    <h2>Yash Patwa<br><span>Founder</span></h2>
+                                    
+                                    <div class="view">
+                                        <a href="#popup2">More Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="front"><img width="100%" height="100%" src="images/nishi.png"></div>
+                            <div class="back">
+                                <div class="details">
+                                    <h2>Nishi Shah<br><span>Founder</span></h2>
+                                    
+                                    <div class="view">
+                                        <a href="#popup3">More Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup1" class="overlay">
+                      <div class="popup">
+                        <aside class="profile-card">
+                          
+  
+  <header>
+    <a class="close" href="#">&times;</a>
+    <!-- here’s the avatar -->
+    <a href="">
+      <img src="images/tul.jpg">
+    </a>
+
+    <!-- the username -->
+    <h1>Tulika Kotian</h1>
+    
+    <!-- and role or location -->
+    <h2>Founder, Goonj</h2>
+    <h2>Engineer</h2>
+  </header>
+  
+  <!-- bit of a bio; who are you? -->
+  <div class="profile-bio">
+    
+    <p>Tulika is an IT engineering student from Mumbai, who aims at making our society a better place to live for our children, to provide them the best accomodities. Alongwith her co-operative co-founders, she's leaving every stone unturned in achieving her goal.</p>
+    
+  </div>
+</aside>
+</div>
+</div>
+
+<div id="popup2" class="overlay">
+  <div class="popup">
+    <aside class="profile-card">
+      
+  
+  <header>
+    <a class="close" href="#">&times;</a>
+    <!-- here’s the avatar -->
+    <a href="">
+      <img src="images/yash.jpg">
+    </a>
+
+    <!-- the username -->
+    <h1>Yash Patwa</h1>
+    
+    <!-- and role or location -->
+    <h2>Founder, Goonj</h2>
+    <h2>Engineer</h2>
+  </header>
+  
+  <!-- bit of a bio; who are you? -->
+  <div class="profile-bio">
+    
+    <p>Yash is an IT engineering student from Mumbai, whose childhood aim has been in contributing to the society in every way possible, and through this NGO, with the help of his co-founders, he's making his dream come true!</p>
+    
+  </div>
+</aside>
+</div>
+</div>
+
+    <div id="popup3" class="overlay">
+                      <div class="popup">
+                        <aside class="profile-card">
+                          <a class="close" href="#">&times;</a>
+  
+  <header>
+    <a class="close" href="#">&times;</a>
+    <!-- here’s the avatar -->
+    <a href="">
+      <img src="images/nishi.png">
+    </a>
+
+    <!-- the username -->
+    <h1>Nishi Shah</h1>
+    
+    <!-- and role or location -->
+    <h2>Founder, Goonj</h2>
+    <h2>Engineer</h2>
+  </header>
+  
+  <!-- bit of a bio; who are you? -->
+  <div class="profile-bio">
+    
+    <p>Nishi is an IT engineering student from Mumbai, who has been active in social service campaigns since a year. With the cooperation of her co-founders, she's been successful in making the biggest impacts to society via our NGO.</p>
+    
+  </div>
+</aside>
+</div>
+</div>
+    </section>
+
+    <div class="parallax2">
+      <div class="heading-sm">
+        Healing A Hurting World.
+      </div>
+    </div>
+
+    <section class="dark">
+    	<h2>What We Do</h2>
+    	<p>We at GOONJ, aim at working towards a world where every child has a happy, healthy and secure childhood we passionately believe they deserve.</p>
+		<p>India is only the second country where children live in extreme poverty. We are helping to change this by providing Health Nutrition, Education and Child Protection that benefits thousands of children every year.</p>
+	</section>
+
+	<section>
+    <div>
+      <h3>Donate</h3>
+      <div class="one-col">
+        <p>"Helping people by charity is the most human thing we can do"- Oprah Winfrey</p>
+        <p>You need not have abundant surplus income to donate and remove inequality. All you need, is a sense of responsibility to donate whatever you can, to help bring significant and serious change.</p>
+        <p>Your donation can change someone's life.</p>
+        <!--<p>Upon making a donation, we will immediately send you a video message from our staff in the field so you can see the impact of your donation.</p>-->  
+      </div>
+      <div class="one-col">
+        <button class="button" align="right" style="float: center;"><a href="donate.php"><span>Donate</span></a></button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="dark">
+  	<h2>Sneak Peak..</h2>
+  	<iframe width="420" height="315"
+      src="https://youtube.com/embed/nNspbvZ19w0?autoplay=1">  
+    </iframe>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <iframe width="420" height="315"
+      src="https://youtube.com/embed/v=sCPREA5NFTU?autoplay=1">  
+    </iframe>
+    <br>
+    <br>
+    <button class="button" onclick="loadXMLDoc()">Our Best Donaters</button>
+<br><br>
+<table id="demo" align="center"></table>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "donaters.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Donater</th><th>City</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("DONATER")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("AMOUNT")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+  </section>
+
+  <div class="parallax6">
+      <div class="heading-sm">
+        Every good act is charity.
+      </div>
+    </div>
+    <footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo">Goonj.</h1>
+        
+    <h2 align="left">Contact</h2>
+    
+    <address align="left">
+      Borivali West, Mumbai<br>
+          
+      <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+    </address>
+  </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title"></h2>
+
+      <ul class="nav__ul">
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <br>
+
+        <li>
+          <a href="#">Projects</a>
+        </li>
+            
+        <!--<li>
+          <a href="#">Alternative Ads</a>
+        </li>-->
+      </ul>
+    </li>
+    
+    <li class="nav__item ">
+      <h2 class="nav__title"></h2>
+      
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+        
+       <!-- <li>
+          <a href="#">Software Design</a>
+        </li>
+        
+        <li>
+          <a href="#">Digital Signage</a>
+        </li>
+        
+        <li>
+          <a href="#">Automation</a>
+        </li>
+        
+        <li>
+          <a href="#">Artificial Intelligence</a>
+        </li>
+        
+        <li>
+          <a href="#">IoT</a>
+        </li>-->
+      </ul>
+    </li>
+    
+    <li class="nav__item">
+      <h2 class="nav__title"></h2>
+      
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Sign In</a>
+        </li>
+        <br>
+        
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+        
+        <!--<li>
+          <a href="#">Sitemap</a>
+        </li>-->
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; 2019 Goonj. All rights reserved.</p>
+    
+    <div class="legal__links">
+      <span>Made by Tulika Kotian, Yash Patwa, Nishi Shah</span>
+    </div>
+  </div>
+</footer>
+  </body>
+  <script>
+  	$(function() {
+  
+  // contact form animations
+  $('#button').click(function() {
+    $('#donation-container').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("donation-container");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+  
+});
+</script>
